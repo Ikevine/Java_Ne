@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bankingManagement
+    username: postgres
+    password: ikevine
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ishimwekevine098@gmail.com
+    password: mebi rngb sikz kucz
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+file:
+  upload:
+    dir : upload
+logging:
+  level:
+    org.springframework.security: DEBUG
+    rw.ac.rca.OnlineShop: TRACE
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs.path: /api-docs
+
